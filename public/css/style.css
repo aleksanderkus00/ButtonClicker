@@ -49,7 +49,8 @@ form {
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 35vh;
+    max-width: 500px;
+    min-height: 40vh;
     
     background: #F0F0F0;
     border: 1px solid #000000;
@@ -117,6 +118,7 @@ input {
     }
 
     .title {
+        flex-grow: 1;
         font-size: 48px;
     }
 
@@ -124,11 +126,14 @@ input {
         display: none;
     } 
     .logo-mobile {
+        flex-grow: 1;
         display: inline;
     }
 
     form {
+        flex-grow: 3;
         margin: auto;
+        margin-top: 1em;
     }
 
 }
