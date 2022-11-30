@@ -19,12 +19,9 @@ body {
     text-align: center;
 }
 
-.logo {
-    display: inline;
-}
-
-.logo-mobile {
-    display: none;
+.logo > img{
+    width: 50%;
+    margin: 0 auto;
 }
 
 .title {
@@ -122,13 +119,11 @@ input {
         font-size: 48px;
     }
 
+    /*
     .logo {
         display: none;
     } 
-    .logo-mobile {
-        flex-grow: 1;
-        display: inline;
-    }
+    */
 
     form {
         flex-grow: 3;
