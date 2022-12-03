@@ -140,7 +140,11 @@ input {
     border-top: 0px;
 }
 
-.profile  {
+#profile {
+    display: visible;
+}
+
+.score { 
     font-family: 'Abel';
     font-style: normal;
     font-weight: 400;
