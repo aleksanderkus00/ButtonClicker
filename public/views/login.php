@@ -33,7 +33,7 @@
                     ?>
                 </div>
                 <div class="buttons">
-                    <button>REGISTER</button>
+                    <button name="registerButton">REGISTER</button>
                     <button type="submit">OK</button>
                 </div>
             </form>

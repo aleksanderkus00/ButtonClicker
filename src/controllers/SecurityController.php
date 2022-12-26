@@ -16,8 +16,14 @@ class SecurityController extends AppController {
         if (!$this->isPost()) {
             return $this->render('login');
         }
+        if(array_key_exists('registerButton', $_POST)) {
+            return $this->render('register');
+        }
         $email = $_POST["email"];
         $password = $_POST["password"];
+        if ($email === "" || $password === "") {
+            return $this->render('login');
+        }
         $user = $this->userRepository->getUser($email);
         
         if (!$user) {
@@ -36,6 +42,9 @@ class SecurityController extends AppController {
     public function registerUser() {
         if (!$this->isPost()) {
             return $this->render('register');
+        }
+        if(array_key_exists('loginButton', $_POST)) {
+            return $this->render('login');
         }
         $email = $_POST["email"];
         $password = $_POST["password"];

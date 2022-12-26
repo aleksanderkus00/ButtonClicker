@@ -33,7 +33,7 @@
                     ?>
                 </div>
                 <div class="buttons">
-                    <button>LOGIN</button>
+                    <button name="loginButton">LOGIN</button>
                     <button type="sumbit">OK</button>
                 </div>
             </form>
