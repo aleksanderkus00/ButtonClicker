@@ -1,15 +1,28 @@
 const PROFILEID = 'profile';
 const RANKINGID = 'ranking';
 const SETTINGSID = 'settings';
+const PROFILEBUTTONID = 'profileButton';
+const RANKINGBUTTONID = 'rankingButton';
+const SETTINGSBUTTONID = 'settingsButton';
 
-function showTab(tabId) {
+function showTab(descId, sorceId) {
     let profile = document.getElementById(PROFILEID);
     let ranking = document.getElementById(RANKINGID);
     let settings = document.getElementById(SETTINGSID);
+    let profileButton = document.getElementById(PROFILEBUTTONID);
+    let rankingButton = document.getElementById(RANKINGBUTTONID);
+    let settingsButton = document.getElementById(SETTINGSBUTTONID);
 
-    if (tabId === PROFILEID) displayProfile(profile, ranking, settings);
-    else if (tabId === RANKINGID) displayRanking(profile, ranking, settings);
-    else if (tabId === SETTINGSID) displaySettings(profile, ranking, settings);
+    // TODO: add disable button border bottom if clicked
+    if (descId === PROFILEID) {
+        displayProfile(profile, ranking, settings, profileButton);
+    }
+    else if (descId === RANKINGID) {
+        displayRanking(profile, ranking, settings, rankingButton);
+    }
+    else if (descId === SETTINGSID) {
+        displaySettings(profile, ranking, settings, settingsButton);
+    }
 }
 
 function displayProfile(profile, ranking, settings){
@@ -32,10 +45,20 @@ function displaySettings(profile, ranking, settings){
 
 function makeInvisible(tab) {
     tab.style.display = 'none';
-    tab.style.borderbottom = '0px';
 }
 
 function makeVisible(tab) {
     tab.style.display = 'block';
-    tab.style.borderbottom = '1px solid #000000';
 }
+
+function disableButtonBorderBottom(button){
+    button.style.borderBottom = '0px';
+}
+function AbleButtonBorderBottom(button){
+    button.style.borderBottom = '1px solid #000000';
+}
+
+/*
+    tab.style.borderBottom = '0px';
+    tab.style.borderBottom = '1px solid #000000';
+*/

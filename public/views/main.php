@@ -19,9 +19,9 @@
         </div>
         <div class="menu">
             <div class="tab">
-                <button id="profileButton" class="tablinks" onclick="showTab('profile')">Profile</button>
-                <button id="rankingButton" class="tablinks" onclick="showTab('ranking')">Top 100</button>
-                <button id="settingButton" class="tablinks" onclick="showTab('settings')">Settings</button>
+                <button id="profileButton" class="tablinks" onclick="showTab('profile', 'profileButton')">Profile</button>
+                <button id="rankingButton" class="tablinks" onclick="showTab('ranking', 'rankingButton')">Top 100</button>
+                <button id="settingButton" class="tablinks" onclick="showTab('settings', 'settingsButton')">Settings</button>
             </div>
             <div class="body">
                 <div id="profile">
