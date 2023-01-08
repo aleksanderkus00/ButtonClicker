@@ -1,28 +1,4 @@
-class User {
-  constructor(email, password, nickname, clicks) {
-    this.email = email;
-    this.password = password;
-    this.nickname = nickname;
-    this.clicks = clicks;
-  }
-}
 const rankingContainer = document.querySelector("#ranking");
-
-function setUser(user) {
-  localStorage.setItem("user", user);
-}
-
-function getUser() {
-  return localStorage.getItem("user");
-}
-
-function deleteUser() {
-  localStorage.removeItem("user");
-}
-
-function login() {
-  console.log("loging...");
-}
 
 function getTop100() {
   fetch("/getTop100", {

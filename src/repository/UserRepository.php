@@ -17,12 +17,14 @@ class UserRepository extends Repository {
         }
 
         $user = new User(
+            $userData['id'],
             $userData['email'],
             $userData['password'],
             $userData['nickname'],
             $userData['id_users_clicks']
         );
         $user->setClicks($this->getClicks($user));
+        $this->setUserCookies($user);
         return $user;
     }
     
@@ -49,6 +51,45 @@ class UserRepository extends Repository {
         $stmt->execute();
         $ranking = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $ranking;
+    }
+
+    public function updateClicks($userId, $clicks) {
+        $stmt = $this->database->connect()->prepare(
+            'SELECT * FROM users WHERE id = :id'
+        );
+        $stmt->bindParam(':id', $userId, PDO::PARAM_INT);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt = $this->database->connect()->prepare(
+            'UPDATE users_clicks set clicks = :clicks where id = :id'
+        );
+        $stmt->bindParam(':id', $user['id_users_clicks'], PDO::PARAM_INT);
+        $stmt->bindParam(':clicks', $clicks, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
+    public function updateProp($userId, $propertyName, $newValue) {
+        $query = "";
+        if ($propertyName == "nickname") {
+            $query = 'UPDATE users set nickname = :v where id = :id';
+        } else if ($propertyName == "email") {
+            $query = 'UPDATE users set email = :v where id = :id';
+        } else if ($propertyName == "password") {
+            //TODO add hashing
+            $query = 'UPDATE users set password = :v where id = :id';
+        }
+        $stmt = $this->database->connect()->prepare($query);
+        $stmt->bindParam(':id', $userId, PDO::PARAM_STR);
+        $stmt->bindParam(':v', $newValue, PDO::PARAM_STR);
+        $stmt->execute();
+    }
+
+
+    private function setUserCookies(User $user) {
+        setCookie('userId', $user->getId());
+        setCookie('nickname', $user->getNickname());
+        setCookie('clicks', $user->getClicks());
+        setCookie('email', $user->getEmail());
     }
 
     private function getUserClicksId(User $user) {

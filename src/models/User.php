@@ -1,6 +1,7 @@
 <?php
 
 class User {
+    private $id;
     private $email;
     private $password;
     private $nickname;
@@ -8,15 +9,20 @@ class User {
     private $id_clicks;
 
     public function __construct(
+        int $id,
         string $email, 
         string $password, 
         string $nickname,
         int $id_clicks = 0
     ) {
+        $this->id = $id;
         $this->email = $email;
         $this->password = $password;
         $this->nickname = $nickname;
         $this->id_clicks = $id_clicks;
+    }
+    public function getId() {
+        return $this->id;
     }
 
     public function setEmail(string $email) {

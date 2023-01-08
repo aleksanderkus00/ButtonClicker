@@ -64,7 +64,7 @@ class SecurityController extends AppController {
         }
         */
         $nickname = strstr($email, '@', true);
-        $user = new User($email, $password, $nickname);
+        $user = new User(0, $email, $password, $nickname);
         $this->userRepository->addUser($user);
         return $this->render('login', ['messages' => ['You\'ve been successfully registered!']]);
     }

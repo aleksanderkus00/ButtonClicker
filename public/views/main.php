@@ -27,7 +27,7 @@
             <div class="body">
                 <div id="profile">
                     <div class="score">Your Score:</div>
-                    <div id="userClicks" class="userClicks">-1</div>
+                    <div id="userClicks" class="userClicks"></div>
                 </div>
                 <div id="rankingTable" style="display: none">
                     <div class="rankingTableWrapper">
@@ -40,7 +40,22 @@
                     </div>
                 </div>
                 <div id="settings" style="display: none">
-                    <h1>siema</h1>
+                    <div class="loading"></div>
+                    <p>Nickname</p>
+                    <div class="field">
+                        <input id="nickname" type="text" placeholder="new nickname">
+                        <img class="save" src="public/img/save.png" alt="" onclick="saveChange('nickname')">
+                    </div>
+                    <p>Password</p>
+                    <div class="field">
+                        <input id="password" type="password" placeholder="************">
+                        <img class="save" src="public/img/save.png" alt="" onclick="saveChange('password')">
+                    </div>
+                    <p>Email</p>
+                    <div class="field">
+                        <input id="email" type="text" placeholder="yourNew@email.com">
+                        <img class="save" src="public/img/save.png" alt="" onclick="saveChange('email')">
+                    </div>
                 </div>
             </div>
         </div>
