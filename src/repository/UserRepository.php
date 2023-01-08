@@ -42,6 +42,15 @@ class UserRepository extends Repository {
         ]);
     }
 
+    public function getTop100() {
+        $stmt = $this->database->connect()->prepare(
+            'SELECT u.nickname, uc.clicks  from users u join users_clicks uc on u.id_users_clicks = uc.id order by uc.clicks desc limit 100;'
+        );
+        $stmt->execute();
+        $ranking = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $ranking;
+    }
+
     private function getUserClicksId(User $user) {
         $stmt = $this->database->connect()->prepare(
             'SELECT max(id) FROM users_clicks'
