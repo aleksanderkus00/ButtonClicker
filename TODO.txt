@@ -5,4 +5,5 @@ TODO list
 * dodac role
 * stworzyc user controller
 * stwrzyc funckje getUserById()
-* dodac hashingl
+* dodac hashing
+* dodac mozliwosc wylogowania sie 
