@@ -1,3 +1,31 @@
+.navbar {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 50px;
+  background: linear-gradient(
+    90deg,
+    #ff7c59 0%,
+    #ff7c59 0.01%,
+    #ff7c59 46.87%,
+    #ffbe4b 100%,
+    #ff7c59 100%
+  );
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}
+
+.navbar > button {
+  width: 100px;
+  margin-right: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
 body {
   margin: 0;
 }
@@ -26,6 +54,12 @@ body {
   text-align: center;
 }
 
+.title {
+  animation: MoveUpDown 5s linear infinite;
+  left: 0;
+  bottom: 0;
+}
+
 .logo > img {
   width: 50%;
   margin: 0 auto;
@@ -44,7 +78,7 @@ body {
 }
 
 .login-container {
-  width: 50%;
+  width: 35%;
 }
 
 form {
@@ -260,6 +294,21 @@ input {
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
+}
+
+/* Validators */
+.no-valid {
+  border-color: red;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
 }
 
 @media only screen and (max-device-width: 425px) {

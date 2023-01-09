@@ -1,7 +1,6 @@
 TODO list
 --------
-* walidacja w logowaniu
 * dodac role
-* stworzyc user controller
-* stwrzyc funckje getUserById()
-* dodac mozliwosc wylogowania sie 
+* stworzyc sesje
+* naprawic loading bar na zapisie
+* dodac virual scroll

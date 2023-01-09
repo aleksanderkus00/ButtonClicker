@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <script type="text/javascript" src="./public/js/script.js" defer></script>
+    <script type="text/javascript" src="./public/js/validators.js" defer></script>
     <title>Button Clicker Register</title>
 </head>
 <body>
@@ -34,7 +35,7 @@
                 </div>
                 <div class="buttons">
                     <button name="loginButton">LOGIN</button>
-                    <button type="sumbit">OK</button>
+                    <button id="OkButton" type="submit">OK</button>
                 </div>
             </form>
         </div>

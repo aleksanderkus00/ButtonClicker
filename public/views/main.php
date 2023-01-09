@@ -10,6 +10,9 @@
     <title>Button Clicker</title>
 </head>
 <body>
+    <div class="navbar">
+        <button onclick="logout()">Logout</button>
+    </div>
     <div class="container">
         <div class="logo-title">
             <div class="title">BUTTON</div>

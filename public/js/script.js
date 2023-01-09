@@ -101,6 +101,10 @@ function setCookie(name, value) {
   document.cookie = name + "=" + value;
 }
 
+function eraseCookie(name) {
+  document.cookie = name + "=; Max-Age=-99999999;";
+}
+
 function updateClicks() {
   const userId = Number(getCookie("userId"));
   const data = { clicks: clicks, userId: userId };
@@ -143,4 +147,14 @@ function saveChange(prop) {
       loading.style.background = "#d9d9d9";
     }, 500);
   });
+}
+
+function logout() {
+  let url = window.location.href;
+  url = url.replace("clicker", "login");
+  window.location.href = url;
+  eraseCookie("userId");
+  eraseCookie("nickname");
+  eraseCookie("email");
+  eraseCookie("clicks");
 }
