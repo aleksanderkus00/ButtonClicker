@@ -86,10 +86,10 @@ class UserRepository extends Repository {
 
 
     private function setUserCookies(User $user) {
-        setCookie('userId', $user->getId());
-        setCookie('nickname', $user->getNickname());
-        setCookie('clicks', $user->getClicks());
-        setCookie('email', $user->getEmail());
+        setCookie('userId', $user->getId(), time()+86400);
+        setCookie('nickname', $user->getNickname(), time()+86400);
+        setCookie('clicks', $user->getClicks(), time()+86400);
+        setCookie('email', $user->getEmail(), time()+86400);
     }
 
     private function getUserClicksId(User $user) {
