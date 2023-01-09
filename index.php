@@ -9,8 +9,8 @@ Routing::get('clicker', 'DefaultController');
 Routing::get('login', 'DefaultController');
 Routing::get('register', 'DefaultController');
 
-Routing::post('updateClicks', 'RankingController');
-Routing::post('updateProp', 'RankingController');
+Routing::post('updateClicks', 'UserController');
+Routing::post('updateProp', 'UserController');
 Routing::get('getTop100', 'RankingController');
 
 Routing::post('loginUser', 'SecurityController');

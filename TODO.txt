@@ -1,9 +1,7 @@
 TODO list
 --------
 * walidacja w logowaniu
-* zapisz usera w cookie
 * dodac role
 * stworzyc user controller
 * stwrzyc funckje getUserById()
-* dodac hashing
 * dodac mozliwosc wylogowania sie 
