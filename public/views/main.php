@@ -19,7 +19,7 @@
             <div class="title">BUTTON</div>
             <div class="title">CLICKER</div>
             <div class="logo">
-                <img onclick="buttonClick()" src="public/img/logo.svg">
+                <img onclick="buttonClick()" onmousedown="down()" onmouseup="up()" src="public/img/logo.svg">
             </div>
         </div>
         <div class="menu">

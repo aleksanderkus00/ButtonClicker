@@ -1,6 +1,7 @@
 let userClicks = document.querySelector("#userClicks");
 let nickname = document.querySelector("#nickname");
 let email = document.querySelector("#email");
+let imgClick = document.querySelector("#imgClick");
 let clicks = 0;
 let counter = 0;
 
@@ -14,6 +15,14 @@ window.addEventListener("load", (event) => {
   cookieEmail = getCookie("email");
   email.value = cookieEmail.replace("%", "@");
 });
+
+function down() {
+  imgClick.style.transform = "scale(1.1)";
+}
+
+function up() {
+  imgClick.style.transform = "scale(1)";
+}
 
 function buttonClick() {
   clicks += 1;
