@@ -1,23 +1,16 @@
-const PROFILEID = "profile";
-const RANKINGID = "rankingTable";
-const SETTINGSID = "settings";
-const PROFILEBUTTONID = "profileButton";
-const RANKINGBUTTONID = "rankingButton";
-const SETTINGSBUTTONID = "settingsButton";
+const profile = document.getElementById("profile");
+const ranking = document.getElementById("rankingTable");
+const settings = document.getElementById("settings");
+const profileButton = document.getElementById("profileButton");
+const rankingButton = document.getElementById("rankingButton");
+const settingsButton = document.getElementById("settingButton");
 
-function showTab(descId, sorceId) {
-  let profile = document.getElementById(PROFILEID);
-  let ranking = document.getElementById(RANKINGID);
-  let settings = document.getElementById(SETTINGSID);
-  let profileButton = document.getElementById(PROFILEBUTTONID);
-  let rankingButton = document.getElementById(RANKINGBUTTONID);
-  let settingsButton = document.getElementById(SETTINGSBUTTONID);
-
-  if (descId === PROFILEID) {
+function showTab(tab) {
+  if (tab === "profile") {
     displayProfile(profile, ranking, settings, profileButton);
-  } else if (descId === RANKINGID) {
+  } else if (tab === "rankingTable") {
     displayRanking(profile, ranking, settings, rankingButton);
-  } else if (descId === SETTINGSID) {
+  } else if (tab === "settings") {
     displaySettings(profile, ranking, settings, settingsButton);
   }
 }
@@ -38,6 +31,7 @@ function displaySettings(profile, ranking, settings) {
   makeInvisible(profile);
   makeInvisible(ranking);
   makeVisible(settings);
+  disableButtonBorderBottom(settingsButton);
 }
 
 function makeInvisible(tab) {
