@@ -7,27 +7,27 @@ const settingsButton = document.getElementById("settingButton");
 
 function showTab(tab) {
   if (tab === "profile") {
-    displayProfile(profile, ranking, settings, profileButton);
+    displayProfile();
   } else if (tab === "rankingTable") {
-    displayRanking(profile, ranking, settings, rankingButton);
+    displayRanking();
   } else if (tab === "settings") {
-    displaySettings(profile, ranking, settings, settingsButton);
+    displaySettings();
   }
 }
 
-function displayProfile(profile, ranking, settings) {
+function displayProfile() {
   makeVisible(profile);
   makeInvisible(ranking);
   makeInvisible(settings);
 }
 
-function displayRanking(profile, ranking, settings) {
+function displayRanking() {
   makeInvisible(profile);
   makeVisible(ranking);
   makeInvisible(settings);
 }
 
-function displaySettings(profile, ranking, settings) {
+function displaySettings() {
   makeInvisible(profile);
   makeInvisible(ranking);
   makeVisible(settings);
