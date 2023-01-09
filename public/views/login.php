@@ -34,7 +34,7 @@
                     ?>
                 </div>
                 <div class="buttons">
-                    <button type="button" name="registerButton">REGISTER</button>
+                    <button name="registerButton">REGISTER</button>
                     <button id="ok" type="submit">OK</button>
                 </div>
             </form>
