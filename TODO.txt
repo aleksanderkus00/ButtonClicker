@@ -1,6 +1,5 @@
 TODO list
 --------
 * dodac role
-* stworzyc sesje
 * naprawic loading bar na zapisie
 * dodac virual scroll
