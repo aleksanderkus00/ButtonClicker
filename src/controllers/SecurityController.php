@@ -20,7 +20,7 @@ class SecurityController extends AppController {
             return $this->render('register');
         }
         $email = $_POST["email"];
-        $password = $_POST["password"];
+        $password = md5($_POST["password"]);
         if ($email === "" || $password === "") {
             return $this->render('login');
         }
@@ -47,22 +47,10 @@ class SecurityController extends AppController {
             return $this->render('login');
         }
         $email = $_POST["email"];
-        $password = $_POST["password"];
+        $password = md5($_POST["password"]);
         if ($email === "" || $password === "") {
             return $this->render('register');
         }
-
-        /* email is in db
-        if () {
-            return $this->render('register', ['messages' => ['Account with this emil already exits']]);
-        }
-        */
-        /*
-        password is too weak
-        if () {
-            return $this->render('register', ['messages' => [Password is too weak']]);
-        }
-        */
         $nickname = strstr($email, '@', true);
         $user = new User(0, $email, $password, $nickname);
         $this->userRepository->addUser($user);
