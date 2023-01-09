@@ -31,7 +31,6 @@ function displaySettings() {
   makeInvisible(profile);
   makeInvisible(ranking);
   makeVisible(settings);
-  disableButtonBorderBottom(settingsButton);
 }
 
 function makeInvisible(tab) {
@@ -41,15 +40,3 @@ function makeInvisible(tab) {
 function makeVisible(tab) {
   tab.style.display = "block";
 }
-
-function disableButtonBorderBottom(button) {
-  button.style.borderBottom = "0px";
-}
-function AbleButtonBorderBottom(button) {
-  button.style.borderBottom = "1px solid #000000";
-}
-
-/*
-    tab.style.borderBottom = '0px';
-    tab.style.borderBottom = '1px solid #000000';
-*/
