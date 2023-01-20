@@ -11,7 +11,7 @@ class RankingController extends AppController {
         $this->userRepository = new UserRepository(); 
     }
 
-    public function getTop100() {
+    public function getTop10() {
         $top100 = $this->userRepository->getTop100();
         echo json_encode($top100);
         return json_encode($top100);

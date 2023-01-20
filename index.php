@@ -11,7 +11,7 @@ Routing::get('register', 'DefaultController');
 
 Routing::post('updateClicks', 'UserController');
 Routing::post('updateProp', 'UserController');
-Routing::get('getTop100', 'RankingController');
+Routing::get('getTop10', 'RankingController');
 
 Routing::post('loginUser', 'SecurityController');
 Routing::post('registerUser', 'SecurityController');

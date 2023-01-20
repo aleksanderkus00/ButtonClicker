@@ -25,7 +25,7 @@
         <div class="menu">
             <div class="tab">
                 <button id="profileButton" onclick="showTab('profile')">Profile</button>
-                <button id="rankingButton" onclick="showTab('rankingTable'); getTop100()">Top 100</button>
+                <button id="rankingButton" onclick="showTab('rankingTable'); getTop10()">Top 10</button>
                 <button id="settingsButton" onclick="showTab('settings')">Settings</button>
             </div>
             <div class="body">

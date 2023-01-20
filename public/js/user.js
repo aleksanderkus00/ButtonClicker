@@ -1,7 +1,7 @@
 const rankingContainer = document.querySelector("#ranking");
 
-function getTop100() {
-  fetch("/getTop100", {
+function getTop10() {
+  fetch("/getTop10", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
